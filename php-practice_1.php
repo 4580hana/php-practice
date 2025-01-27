@@ -104,12 +104,28 @@ else  {
 }
 }
 
-
-
 // Q10 関数-1
+function hello($name)
+{
+    echo $name.'さん、こんにちは。'."\n";;
+}
 
+hello('金谷');
+hello('安藤');
 
 // Q11 関数-2
+
+function calcTaxInPrice($price=1000)
+{
+  return $taxInPrice = $price * (1 + 0.1);
+    
+}
+$price = 1000;
+$taxInPrice = calcTaxInPrice($price); 
+
+echo $price . "円の商品の税込価格は" . $taxInPrice . "円です。"; 
+
+
 
 
 // Q12 関数とif文

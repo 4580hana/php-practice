@@ -114,24 +114,63 @@ hello('金谷');
 hello('安藤');
 
 // Q11 関数-2
-
-function calcTaxInPrice($price=1000)
+function calcTaxInPrice($prce)
 {
-  return $taxInPrice = $price * (1 + 0.1);
+  return $prce * (1 + 0.1);
     
 }
+
 $price = 1000;
 $taxInPrice = calcTaxInPrice($price); 
 
 echo $price . "円の商品の税込価格は" . $taxInPrice . "円です。"; 
 
 
-
-
 // Q12 関数とif文
 
+function distinguishNum($number)
+{
+ if ($number % 2 == 0){
+  echo $number.'は偶数です。'."\n";
+}
+else  {
+ echo $number.'は奇数です。'."\n";
+}
+}
+
+distinguishNum(11);
+distinguishNum(24);
 
 // Q13 関数とswitch文
+
+function distinguishNum($ABCD)
+{
+
+switch ($ABCD) {
+    case 'A':
+    case 'B':
+        echo '合格です。'."\n";
+        break;
+
+    case 'C':
+        echo '合格ですが追加課題があります。'."\n";
+        break;
+
+    case 'D':
+        echo '不合格です。'."\n";
+        break;
+        
+    default:
+        echo '判定不明です。講師に問い合わせてください。'."\n";
+        break;
+
+}
+}
+
+distinguishNum('A');
+distinguishNum('H');
+
+
 
 
 ?>

@@ -97,12 +97,12 @@ echo $yamada->attend('PHP')
 
 //問題１
 $time = new DateTime(); 
-$time->modify('-1 month');
-echo $time->format('Y-m-d');
+echo $time->modify('-1 month')->format('Y-m-d');
 
 //問題２
-$time1 = strtotime('1992-4-25'); 
-$time2 = strtotime('2025-01-28');
-$time3= ($time2 - $time1);
-echo 'あの日から'.$time3.'日経過しました。'
+$time1 = new DateTime('1992-4-25'); 
+$time2 = new DateTime();
+$diff = $time1->diff($time2);
+
+echo 'あの日から'.$diff->days.'日経過しました。'
 ?>

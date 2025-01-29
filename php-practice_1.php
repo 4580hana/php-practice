@@ -105,13 +105,21 @@ else  {
 }
 
 // Q10 関数-1
-function hello($name)
+function hello($name='金谷')
 {
-    echo $name.'さん、こんにちは。'."\n";;
+   return $name.'さん、こんにちは。'."\n";
 }
 
-hello('金谷');
-hello('安藤');
+function hello2($name2='安藤')
+{
+   return $name2.'さん、こんにちは。'."\n";
+}
+
+$message =hello();
+echo $message;
+
+$message2 =hello2();
+echo $message2;
 
 // Q11 関数-2
 function calcTaxInPrice($prce)
@@ -131,46 +139,46 @@ echo $price . "円の商品の税込価格は" . $taxInPrice . "円です。";
 function distinguishNum($number)
 {
  if ($number % 2 == 0){
-  echo $number.'は偶数です。'."\n";
+  return $number.'は偶数です。'."\n";
 }
 else  {
- echo $number.'は奇数です。'."\n";
+ return $number.'は奇数です。'."\n";
 }
 }
 
-distinguishNum(11);
-distinguishNum(24);
+$message =distinguishNum(11);
+echo $message;
+
+$message1 =distinguishNum(24);
+echo $message1;
 
 // Q13 関数とswitch文
-
 function distinguishNum($ABCD)
 {
 
 switch ($ABCD) {
     case 'A':
     case 'B':
-        echo '合格です。'."\n";
+        return '合格です。'."\n";
         break;
 
     case 'C':
-        echo '合格ですが追加課題があります。'."\n";
+        return '合格ですが追加課題があります。'."\n";
         break;
 
     case 'D':
-        echo '不合格です。'."\n";
+        return '不合格です。'."\n";
         break;
         
     default:
-        echo '判定不明です。講師に問い合わせてください。'."\n";
+        return '判定不明です。講師に問い合わせてください。'."\n";
         break;
 
 }
 }
 
-distinguishNum('A');
-distinguishNum('H');
+$message =distinguishNum('A');
+echo $message;
 
-
-
-
-?>
+$message1 =distinguishNum('H');
+echo $message1;
